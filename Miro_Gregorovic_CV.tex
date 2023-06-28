@@ -1,0 +1,201 @@
+\documentclass[10pt]{article} %font size, document class
+
+\usepackage{geometry} 
+\usepackage{paracol} %columns
+
+\usepackage[UKenglish]{babel}
+\usepackage{libertine} %libertine font
+
+\usepackage[T1]{fontenc} %pipesign, accented characters
+\usepackage{microtype} %text formatting, e.g. white space
+\usepackage{amssymb}
+
+\usepackage{enumitem} %itemize
+\usepackage{titlesec} %chapters, sections
+\usepackage{fancyhdr} %headers and footers
+
+\usepackage{fontawesome5} %icons
+\usepackage{hyperref} %hyperparameters
+\hypersetup{colorlinks, urlcolor=blue, linkcolor=blue}
+
+%-----------STYLE----------------- 
+\geometry{a4paper, hmargin=1.0cm, vmargin=2cm}
+\columnratio{0.65, 0.35}
+\setlength\columnsep{0.04\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+
+\pagestyle{empty}
+\titleformat{\section}{\scshape\large\bfseries\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\smallskipamount}{\smallskipamount}
+
+%-----------CUSTOM COMMANDS----------------- 
+\newcommand{\heading}[2]{\centering{\Huge{#1}}\\\smallskip{#2}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\roleHeading}[2]{\textbf{#1}\hfill\textbf{#2}}
+\newcommand{\resumeSubheading}[2]{
+  \item[]
+    \vspace{2pt}\hspace{3pt}\textbf{#1} \hfill #2 
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0em]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{
+    \begin{itemize}[
+        noitemsep,
+        leftmargin=3.5mm,
+        rightmargin=0mm,
+        topsep=2pt,
+        label=\textbullet
+        ]
+    }
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\renewcommand{\labelitemii}{$\circ$}
+
+%-----------HEADING-----------------
+\begin{document}
+
+\heading{Miro Gregorovic}{
+  \footnotesize\faEnvelope \thinspace \href{mailto:xxx@gmail.com}{xxx@GMAIL.COM} 
+  | 
+  \footnotesize\faLinkedin \thinspace \href{https://www.linkedin.com/in/mgregorovic/}{LINKEDIN.COM/IN/MGREGOROVIC}
+}
+
+\medskip
+
+\begin{paracol}{2}
+
+%-----------SUMMARY-----------------
+\section{summary}
+\resumeItemListStart
+    \item Senior financial analytics and architecture professional with  experience in asset management, clearing, and capital markets infrastructure
+    \item Implemented multi-year/multi-stakeholder analytics and technology programmes
+    \item MSc qualified; BCS Agile SCRUM, TOGAF, Six Sigma, and CISI certified
+\resumeItemListEnd
+
+\switchcolumn
+
+%-----------EDUCATION-----------------
+\section{education}
+\entry{Georgia Institute of Technology}{MS SC Engineering}{USA}{2012}
+
+\smallskip
+
+\entry{Czech Technical University}{BS Informatics}{CZ}{2009}
+
+\switchcolumn*
+%-----------EXPERIENCE-----------------
+\section{Experience}
+    \roleHeading{LSEG | London, UK}{Nov 2017 -- present}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+          {Senior Manager - Technology Innovation}{Aug 2021 - present}
+          \resumeItemListStart
+              \item Driving Data \& Digital Innovation stream with focus on Analytics and AI 
+              \item Partnering with Risk \& Governance on mapping the Emerging Technology Risk
+              \item Co-leading the Group MLOps programme including 7 other key stakeholders
+          \resumeItemListEnd
+          
+        \resumeSubheading
+          {Senior Enterprise Architect}{Jul 2020 - Jul 2021}
+          \resumeItemListStart
+              \item Led LSEG Data Science Centre of Enablement to supported 15 teams to define solutions, integrate best practices, increase product quality and strengthen data culture; in close cooperation with other group engineering, infrastructure and governance teams (Python, AWS)
+              \item Collaborated with production and engineering teams to design and implement analytics solutions, e.g. Sentiment Risk Analysis, Anomaly detection in Platform Operations, Settlement Forecasting
+          \resumeItemListEnd
+          
+        \resumeSubheading
+          {Data Science Engineer}{Jul 2019 - Jun 2020}
+          \resumeItemListStart
+              \item Guided teams across LSEG (esp. Capital Markets and Data \& Analytics) on data science initiatives in full development cycle, ie. client requirements, solution design, prototyping and testing, implementation (Python, AWS/Azure, SQL, GIT)
+              \item Participated in Solution Architecture forum sessions and contributed to LSEG Analytics Architecture (Analytics Platform and Tooling, Operating model, MLOps)
+              \item Defined the Data Science Engineering standards, design principles and roadmaps
+          \resumeItemListEnd
+
+          \resumeSubheading
+          {Risk Associate}{Nov 2017 - Jul 2019}
+          \resumeItemListStart
+              \item Defined LCH’s Financial Risk analytics and reporting as part of the wider Enterprise Risk Management Framework with focus on Parameter Calibration, Margin Analytics, Stress Testing, Default Simulation ‘FireDrill’ Second line analytics and reporting. (Python, Java, SQL, Tableau)
+              \item Owned daily risk analytics production and execution, including sensitivity testing and backtesting
+              \item Deputised for Senior Manager at internal and external compliance meetings (Bank of England and ESMA) on risk analytics and regulatory liaison
+          \resumeItemListEnd      
+    \resumeSubHeadingListEnd
+
+    \par\noindent\dotfill
+    \smallskip
+    
+    \roleHeading{Sopra Steria | Edinburgh, UK}{Jan 2016 -- Oct 2017}
+    \resumeItemListStart
+        \item Coached and mentored four consultants (training, performance review)
+        \item \textbf{Aberdeen Standard Investment} project: Led Data and Analytics development team to implement Fixed Income Performance and Investment Risk data management solutions (C\# .NET, Python, XML, SQL, SSIS, SSAS, BI)
+        \item Chaired SSIS ETL Design forum to standardise development and data modelling
+    \resumeItemListEnd
+
+    \smallskip
+    \par\noindent\dotfill
+    \smallskip
+    
+    \raggedright\textbf{Other Experience}: Logio, EMEA (2014-2015) | SanDisk, SF Bay Area (2012-2014)
+
+
+%-----------SWITCH COLUMN-----------------
+\switchcolumn
+
+
+%-----------SYSTEMS & TECHNOLOGY-----------------
+\section{Systems \& Technology}
+\resumeItemListStart
+  \item Programming (Python, C\#, Java, PL/SQL)
+  \item Data Engineering (SQL, Oracle, PySpark)
+  \item BI (SSIS/SSAS/SSRS, Alteryx, Tableau, Power BI, SAP BO)
+  \item ML (Tensor Flow, Scikit-Learn)
+  \item Cloud (Architecting \& SysOps on AWS)
+\resumeItemListEnd
+
+%-----------CERTIFICATION----------------
+\section{Certification}
+\resumeItemListStart
+    \item CISI Investment Operations \& Risk (L3)
+    \item TOGAF 9.2
+    \item BCS Agile SCRUM
+    \item Lean Six Sigma (Green Belt)
+    \item Scientific Computing and Python (WQU)
+    \item Microsoft T-SQL
+\resumeItemListEnd
+
+%-----------PUBLICATIONS----------------
+\section{Publications}
+\resumeItemListStart
+    \item DP5/22 – Artificial Intelligence and Machine Learning (Bank of England). 2023, internal publication
+    \item Artificial Intelligence Public-Private Forum (FCA). 2022-2023, internal publication 
+    \item \href{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3778998}{Towards Algorithm Auditing: A Survey on Managing Legal, Ethical and Technological Risks of AI, ML and Associated Algorithms (SSRN). Feb 2021} 
+    \item \href{https://www.youtube.com/watch?v=IwCscS-XBc4}{New Generation Banking(Edinburgh Data Lab). 2017}
+\resumeItemListEnd
+
+%-----------AWARDS-----------------
+\section{Awards}
+\resumeItemListStart
+    \item Platinum Award - InterUniversity Hackathon (LSEG, 2022)
+    \item Gold Award - Mentorship (LSEG, 2022)
+    \item Innovation Wow award (LCH, 2018)
+    \item CEO Award \emph{nominated} (LCH, 2018)
+    \item \href{https://www.scottishfinancialnews.com/articles/finalists-announced-for-scottish-financial-services-awards-2017}{Scottish Financial Enterprise ‘Rising Star’ Award \emph{finalist} (2017)}
+\resumeItemListEnd
+
+\medskip
+\emph{British \& EU citizen, full driving licence}
+
+\switchcolumn*
+\end{paracol}
+
+\vspace*{\fill}
+
+%%-----------CREDITS-----------------
+%\par\noindent\rule{\textwidth}{0.1pt}
+\raggedleft\tiny{
+  written in  
+  \href{https://github.com/Gregomiro/LaTeX/blob/main/Miro_Gregorovic_CV.tex}{LaTe$\chi$}
+}
+
+\end{document}
